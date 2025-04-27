@@ -1,0 +1,344 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: TC016-	Go to about page of Sauce demo and verify the url 
+- Location: C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:88:1
+
+# Error details
+
+```
+Error: Timed out 15000ms waiting for expect(locator).toHaveURL(expected)
+
+Locator: locator(':root')
+Expected string: "https://saucelabs1.com/"
+Received string: "https://saucelabs.com/"
+Call log:
+  - expect.toHaveURL with timeout 15000ms
+  - waiting for locator(':root')
+    18 × locator resolved to <html lang="en">…</html>
+       - unexpected value "https://saucelabs.com/"
+
+    at C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:92:24
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Saucelabs":
+    - img "Saucelabs"
+  - text: Products
+  - img "chevron"
+  - text: Solutions
+  - img "chevron"
+  - link "Pricing"
+  - text: Developers
+  - img "chevron"
+  - text: Resources
+  - img "chevron"
+  - link "Sign in":
+    - button "Sign in"
+  - link "Request a demo":
+    - button "Request a demo"
+  - link "Try it free":
+    - button "Try it free"
+  - button "search":
+    - img "search"
+- heading "Build quality apps" [level=1]
+- heading "with AI-driven insights_" [level=1]
+- paragraph: Power your mobile and web apps at scale with the most comprehensive solution for software quality. Test, release, and innovate confidently with AI-driven insights grounded in real data.
+- link "Go to Dashboard":
+  - button "Go to Dashboard"
+- link "Request a demo":
+  - button "Request a demo"
+- img
+- img "Scroll down"
+- text: 217% ROI <6 mos PAYBACK $6.8M NET PRESENT VALUE ↑90% DEVELOPER AND QA TIME SAVINGS
+- heading "Trusted by industry leaders" [level=2]
+- img "Stripe Logo"
+- img "Black Visa Logo"
+- img "Walmart Logo"
+- img "Black Splunk Logo Banner"
+- img "Verizon media logo"
+- img "Doordash Logo"
+- img "Kaiser Permanente Logo"
+- img "FactSet logo black"
+- img "Alaska Airlines Logo"
+- img "BuzzFeed Logo"
+- img "Deutsche Bank Logo"
+- img "GoPro Logo"
+- img "Stripe Logo"
+- img "Black Visa Logo"
+- img "Walmart Logo"
+- img "Black Splunk Logo Banner"
+- img "Verizon media logo"
+- img "Doordash Logo"
+- img "Kaiser Permanente Logo"
+- img "FactSet logo black"
+- img "Alaska Airlines Logo"
+- img "BuzzFeed Logo"
+- img "Deutsche Bank Logo"
+- img "GoPro Logo"
+- img "Stripe Logo"
+- img "Black Visa Logo"
+- img "Walmart Logo"
+- img "Black Splunk Logo Banner"
+- img "Verizon media logo"
+- img "Doordash Logo"
+- img "Kaiser Permanente Logo"
+- img "FactSet logo black"
+- img "Alaska Airlines Logo"
+- img "BuzzFeed Logo"
+- img "Deutsche Bank Logo"
+- img "GoPro Logo"
+- heading "ENTERPRISE-READY. AI-POWERED. ONE UNIFIED VIEW." [level=2]
+- heading "One Platform for Continuous Quality" [level=3]
+- paragraph: Ensure quality at every stage of development with AI-powered insights. Access the widest selection of real devices, virtual emulators and simulators, and browsers/OS support, plus app distribution and error reporting—all in one platform.
+- link "Green mobile testing icon Sauce Mobile App Testing Deliver seamless mobile app experiences for every device, browser, and operating system":
+  - img "Green mobile testing icon"
+  - heading "Sauce Mobile App Testing" [level=4]
+  - paragraph: Deliver seamless mobile app experiences for every device, browser, and operating system
+- link "Green cross browser testing symbol icon Sauce Web App Testing Ensure apps look their best on every browser and OS combination":
+  - img "Green cross browser testing symbol icon"
+  - heading "Sauce Web App Testing" [level=4]
+  - paragraph: Ensure apps look their best on every browser and OS combination
+- link "Green insights icon AI-Powered Sauce Insights Access real-time analytics, track performance, and drive efficiency with AI-powered insights":
+  - img "Green insights icon"
+  - heading "AI-Powered Sauce Insights" [level=4]
+  - paragraph: Access real-time analytics, track performance, and drive efficiency with AI-powered insights
+- link "Green visual testing icon Sauce Visual Deliver apps that look their best":
+  - img "Green visual testing icon"
+  - heading "Sauce Visual" [level=4]
+  - paragraph: Deliver apps that look their best
+- link "Green workflow icon Sauce Mobile App Distribution Streamline Android/ iOS app distribution and management with our secure, all-in-one platform.":
+  - img "Green workflow icon"
+  - heading "Sauce Mobile App Distribution" [level=4]
+  - paragraph: Streamline Android/ iOS app distribution and management with our secure, all-in-one platform.
+- link "Green error debugging icon Sauce Error Reporting Find and fix errors before users experience them":
+  - img "Green error debugging icon"
+  - heading "Sauce Error Reporting" [level=4]
+  - paragraph: Find and fix errors before users experience them
+- link "Learn more":
+  - button "Learn more"
+- heading "Case Studies" [level=3]
+- heading "Why our customers love Sauce Labs" [level=2]
+- img "Verizon media logo"
+- heading "Verizon Media accelerates millions of tests monthly with Sauce Labs" [level=3]
+- paragraph: With open source technology and Sauce Labs, Verizon Media improved quality, increased efficiency, and reduced staffing, hardware, and maintenance costs.
+- link "Read case study":
+  - button "Read case study"
+- img "Walmart Logo"
+- heading "Walmart uses Sauce Labs to increase coverage and deploy more often" [level=3]
+- paragraph: In one year, Walmart saved 750,000+ people hours that would have been spent on manual testing/updating support for new browsers and operating systems.
+- link "Read case study":
+  - button "Read case study"
+- heading "Deliver quality software continuously" [level=2]
+- heading "Start testing in minutes" [level=3]
+- link "Sign up":
+  - button "Sign up"
+- link "Request a demo":
+  - button "Request a demo"
+- img "Saucelabs"
+- text: Products
+- link "Platform for Test"
+- link "Sauce Cross-Browser"
+- link "Sauce Mobile"
+- link "Sauce Orchestrate"
+- link "Sauce Error Reporting"
+- link "Sauce Visual"
+- text: Global tools
+- link "Sauce Performance"
+- link "Sauce Insights"
+- text: Set up and integrate
+- link "Integrations & plugins"
+- link "Supported browsers and devices"
+- link "Platform configurator"
+- text: Resources
+- link "Resources by topic"
+- link "Blog"
+- link "FAQs"
+- link "Documentation"
+- link "Support"
+- link "Events"
+- link "Videos"
+- link "Webinars"
+- text: Company
+- link "About us"
+- link "Security"
+- link "Partners"
+- link "Careers"
+- link "News"
+- link "Awards"
+- link "Contact us"
+- link "Systems status"
+- link "Twitter":
+  - img "Twitter"
+- link "Facebook":
+  - img "Facebook"
+- link "LinkedIn":
+  - img "LinkedIn"
+- link "Terms of Service"
+- link "Privacy Policy"
+- link "EEA"
+- link "CCPA"
+- text: Cookies Settings © 2025 Sauce Labs Inc., all rights reserved. SAUCE and SAUCE LABS are registered trademarks owned by Sauce Labs Inc. in the United States, EU, and may be registered in other jurisdictions.
+- img "quote"
+- alert
+- region "Cookie banner":
+  - alertdialog "Privacy":
+    - paragraph:
+      - text: This website uses cookies to enhance user experience and to analyze performance and traffic on our website. We also share information about your use of our site with our social media, advertising and analytics partners. To learn more, please visit our
+      - link "More information about your privacy": Cookie Notice
+    - button "OK"
+    - button "Close"
+```
+
+# Test source
+
+```ts
+   1 | const {test,expect}=require('@playwright/test');
+   2 |
+   3 | async function login(page){
+   4 |     await page.goto('https://www.saucedemo.com/');
+   5 |     await page.fill('#user-name','standard_user');
+   6 |     await page.locator('//input[@id="password"]').fill('secret_sauce');
+   7 |     await page.locator("#login-button").click();
+   8 | }
+   9 |
+   10 | test.only('TC011- Verify Adding an Item to the cart',async({page})=>{
+   11 |     await login(page);
+   12 |     const product1AddToProduct=await page.locator("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   13 |     const product2AddToProduct=await page.locator("//button[@data-test='add-to-cart-sauce-labs-bike-light']");
+   14 |     //await page.pause();
+   15 |     await product1AddToProduct.click();
+   16 |     const allvalue=await page.locator("//*[@class='inventory_list']//div[@class='inventory_item_label']/a");
+   17 |     console.log(await allvalue.allTextContents());
+   18 |     //await page.locator("//button[@data-test='add-to-cart-sauce-labs-backpack']").click();
+   19 |     //await page.click("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   20 |     await product2AddToProduct.click();
+   21 |     await expect( page.locator(".shopping_cart_badge")).toHaveText('2');
+   22 |     
+   23 | })
+   24 |
+   25 | test('TC012- Verify Removing items to the cart',async({page})=>{
+   26 |     await login(page);
+   27 |     //await page.pause();
+   28 |     await page.click("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   29 |     await page.click("//button[@data-test='remove-sauce-labs-backpack']");
+   30 |     await expect( page.locator(".shopping_cart_badge")).toBeVisible();
+   31 | })
+   32 |
+   33 | test('TC013- Verify viewing the cart',async({page})=>{
+   34 |     await login(page);
+   35 |     await page.pause();
+   36 |     await page.click("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   37 |     await expect( page.locator(".shopping_cart_badge")).toHaveText('1');
+   38 |     await page.click(".shopping_cart_badge");
+   39 |     const cartTitle=await page.locator(".inventory_item_name").textContent();
+   40 |     console.log(cartTitle);  
+   41 |
+   42 |     await expect( page.locator(".inventory_item_name")).toHaveText('Sauce Labs Backpack');
+   43 |
+   44 |     
+   45 |
+   46 |
+   47 |     
+   48 | })
+   49 |
+   50 | test("TC014-Verify checkout process",async({page})=>{
+   51 |     await login(page);
+   52 |     await page.click("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   53 |     await page.click(".shopping_cart_badge");
+   54 |     await page.click("#checkout");
+   55 |     await page.fill("#first-name","sandeep");
+   56 |     await page.fill("#last-name","kumar");
+   57 |     await page.fill("#postal-code","566660");
+   58 |     await page.click("#continue");
+   59 |     await page.click("//button[text()='Finish']");
+   60 |     await expect(page.locator('.complete-header')).toHaveText('Thank you for your order');
+   61 |     await page.pause();
+   62 | });
+   63 |
+   64 |
+   65 | test('TC017-Verify Sorting items from low to high',async({page})=>{
+   66 |     await login(page);
+   67 |     //await page.pause();
+   68 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   69 |     await dropdown.selectOption('lohi');
+   70 |     await page.waitForTimeout(5000);
+   71 | });
+   72 |
+   73 | test('TC018-Verify Sorting items from high to low',async({page})=>{
+   74 |     await login(page);
+   75 |     await page.pause();
+   76 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   77 |     await dropdown.selectOption('hilo');
+   78 |     await page.waitForTimeout(5000);
+   79 | });
+   80 |
+   81 | test('TC019-Verify Sorting items from z to a',async({page})=>{
+   82 |     await login(page);
+   83 |     //await page.pause();
+   84 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   85 |     await dropdown.selectOption('za');
+   86 |     await page.waitForTimeout(5000);
+   87 | });
+   88 | test('TC016-	Go to about page of Sauce demo and verify the url ',async({page})=>{
+   89 |     await login(page);
+   90 |     await page.locator("//button[@id='react-burger-menu-btn']").click();
+   91 |     await page.click('#about_sidebar_link');
+>  92 |     await expect(page).toHaveURL('https://saucelabs1.com/');
+      |                        ^ Error: Timed out 15000ms waiting for expect(locator).toHaveURL(expected)
+   93 | });
+   94 |
+   95 |
+   96 | test('Login Functionality',async({page})=>{
+   97 |
+   98 | // playwright scripts 
+   99 | await login(page);
+  100 |
+  101 | await page.waitForSelector("#inventory_container");
+  102 | await page.screenshot({path:"dashboard.png"});
+  103 | await page.click("#add-to-cart-sauce-labs-backpack");
+  104 | await page.click("#shopping_cart_container");
+  105 |
+  106 | await page.screenshot({path:"cartpage.png"});
+  107 | //await page.pause();
+  108 | await page.click("#checkout");
+  109 | await page.fill("#first-name","sandeep");
+  110 | await page.fill("#last-name","kumar");
+  111 | await page.fill("#postal-code","566660");
+  112 | await page.click("#continue");
+  113 | await page.click("//button[text()='Finish']");
+  114 | //await page.pause();
+  115 |
+  116 | await expect(page.locator('.complete-header')).toHaveText('Thank you for your order!');
+  117 |
+  118 | });
+  119 |
+  120 | test('Sample Test', async ({ page }) => {
+  121 |     await page.goto('https://playwright.dev/');
+  122 |     await expect(page.locator('text=Get Started')).toBeVisible();
+  123 |     });
+  124 |
+  125 | test('10 minutes timer',async({browser})=>{
+  126 |    const context= await browser.newContext();
+  127 |   const page=await context.newPage();
+  128 |   await page.goto('https://vclock.com/set-timer-for-10-minutes/');
+  129 |   await expect(page).toHaveTitle('Google');
+  130 |  //console.log(await page.title());
+  131 |  console.log(await page.locator("//h1[@id='lbl-title']").textContent());
+  132 |
+  133 |   
+  134 |
+  135 |
+  136 | })
+  137 |
+  138 |
+  139 |
+```

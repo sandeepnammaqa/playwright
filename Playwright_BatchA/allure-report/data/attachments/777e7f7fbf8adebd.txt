@@ -1,0 +1,161 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Sample Test1
+- Location: C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:127:5
+
+# Error details
+
+```
+Error: locator.fill: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByLabel('Username')
+
+    at C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:129:43
+```
+
+# Page snapshot
+
+```yaml
+- text: Swag Labs
+- textbox "Username"
+- textbox "Password"
+- button "Login"
+- heading "Accepted usernames are:" [level=4]
+- text: standard_user locked_out_user problem_user performance_glitch_user error_user visual_user
+- heading "Password for all users:" [level=4]
+- text: secret_sauce
+```
+
+# Test source
+
+```ts
+   29 |     await page.click("//button[@data-test='remove-sauce-labs-backpack']");
+   30 |     await expect( page.locator(".shopping_cart_badge")).toBeVisible();
+   31 | })
+   32 |
+   33 | test('TC013- Verify viewing the cart',async({page})=>{
+   34 |     await login(page);
+   35 |     await page.pause();
+   36 |     await page.click("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   37 |     await expect( page.locator(".shopping_cart_badge")).toHaveText('1');
+   38 |     await page.click(".shopping_cart_badge");
+   39 |     const cartTitle=await page.locator(".inventory_item_name").textContent();
+   40 |     console.log(cartTitle);  
+   41 |
+   42 |     await expect( page.locator(".inventory_item_name")).toHaveText('Sauce Labs Backpack');
+   43 |
+   44 |     
+   45 |
+   46 |
+   47 |     
+   48 | })
+   49 |
+   50 | test("TC014-Verify checkout process",async({page})=>{
+   51 |     await login(page);
+   52 |     await page.click("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   53 |     await page.click(".shopping_cart_badge");
+   54 |     await page.click("#checkout");
+   55 |     await page.fill("#first-name","sandeep");
+   56 |     await page.fill("#last-name","kumar");
+   57 |     await page.fill("#postal-code","566660");
+   58 |     await page.click("#continue");
+   59 |     await page.click("//button[text()='Finish']");
+   60 |     await expect(page.locator('.complete-header')).toHaveText('Thank you for your order');
+   61 |     await page.pause();
+   62 | });
+   63 |
+   64 |
+   65 | test('TC017-Verify Sorting items from low to high',async({page})=>{
+   66 |     await login(page);
+   67 |     //await page.pause();
+   68 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   69 |     await dropdown.selectOption('lohi');
+   70 |     await page.waitForTimeout(5000);
+   71 |
+   72 |     //validation 
+   73 | });
+   74 |
+   75 | test('TC018-Verify Sorting items from high to low',async({page})=>{
+   76 |     await login(page);
+   77 |     await page.pause();
+   78 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   79 |     await dropdown.selectOption('hilo');
+   80 |     await page.waitForTimeout(5000);
+   81 | });
+   82 |
+   83 | test('TC019-Verify Sorting items from z to a',async({page})=>{
+   84 |     await login(page);
+   85 |     //await page.pause();
+   86 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   87 |     await dropdown.selectOption('za');
+   88 |     await page.waitForTimeout(5000);
+   89 | });
+   90 | test('TC016-	Go to about page of Sauce demo and verify the url ',async({page})=>{
+   91 |     await login(page);
+   92 |     await page.locator("//button[@id='react-burger-menu-btn']").click();
+   93 |     await page.click('#about_sidebar_link');
+   94 |     await expect(page).toHaveURL('https://saucelabs.com/');
+   95 | });
+   96 |
+   97 |
+   98 | test('Login Functionality',async({page})=>{
+   99 |
+  100 | // playwright scripts 
+  101 | await login(page);
+  102 |
+  103 | await page.waitForSelector("#inventory_container");
+  104 | await page.screenshot({path:"dashboard.png"});
+  105 | await page.click("#add-to-cart-sauce-labs-backpack");
+  106 | await page.click("#shopping_cart_container");
+  107 |
+  108 | await page.screenshot({path:"cartpage.png"});
+  109 | //await page.pause();
+  110 | await page.click("#checkout");
+  111 | await page.fill("#first-name","sandeep");
+  112 | await page.fill("#last-name","kumar");
+  113 | await page.fill("#postal-code","566660");
+  114 | await page.click("#continue");
+  115 | await page.click("//button[text()='Finish']");
+  116 | //await page.pause();
+  117 |
+  118 | await expect(page.locator('.complete-header')).toHaveText('Thank you for your order!');
+  119 |
+  120 | });
+  121 |
+  122 | test('Sample Test', async ({ page }) => {
+  123 |     await page.goto('https://playwright.dev/');
+  124 |     await expect(page.locator('text=Get Started')).toBeVisible();
+  125 |     });
+  126 |
+  127 |     test('Sample Test1', async ({ page }) => {
+  128 |         await page.goto('https://www.saucedemo.com/');
+> 129 |         await page.getByLabel('Username').fill('standard_user');
+      |                                           ^ Error: locator.fill: Test timeout of 30000ms exceeded.
+  130 |         await page.getByPlaceholder('Password').fill('secret_sauce');
+  131 |         await page.getByRole('button', { name: 'Login' }).click();
+  132 |         
+  133 |        await  page.pause();
+  134 |         });
+  135 |
+  136 | test('10 minutes timer',async({browser})=>{
+  137 |    const context= await browser.newContext();
+  138 |   const page=await context.newPage();
+  139 |   await page.goto('https://vclock.com/set-timer-for-10-minutes/');
+  140 |   await expect(page).toHaveTitle('Google');
+  141 |  //console.log(await page.title());
+  142 |  console.log(await page.locator("//h1[@id='lbl-title']").textContent());
+  143 |
+  144 |   
+  145 |
+  146 |
+  147 | })
+  148 |
+  149 |
+  150 |
+```

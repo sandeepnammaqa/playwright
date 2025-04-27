@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"fde402d30fb0ff06b2722740a7e877c7","name":"magento.spec.js","statistic":{"failed":0,"broken":2,"skipped":0,"passed":11,"unknown":0,"total":13}},{"uid":"28d2919194f0514ade7dd15635afec57","name":"example.spec.js","statistic":{"failed":0,"broken":1,"skipped":0,"passed":1,"unknown":0,"total":2}}]}

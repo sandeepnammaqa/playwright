@@ -1,0 +1,54 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: has title
+- Location: C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\example.spec.js:4:6
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('//ul[@class=\'s05d\']//a[@target=\'_blank\'][normalize-space()=\'Mobile Recharge\']')
+
+    at C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\example.spec.js:9:103
+```
+
+# Test source
+
+```ts
+   1 | // @ts-check
+   2 | import { test, expect } from '@playwright/test';
+   3 |
+   4 | test.only('has title', async ({ page }) => {
+   5 |   await page.goto('https://paytm.com/');
+   6 |   await page.pause();
+   7 |   await page.locator("//li[text()='Recharge & Bills']").hover();
+   8 |   await page.waitForTimeout(5000);
+>  9 |   await page.locator("//ul[@class='s05d']//a[@target='_blank'][normalize-space()='Mobile Recharge']").click();
+     |                                                                                                       ^ Error: locator.click: Target page, context or browser has been closed
+  10 |   await page.waitForTimeout(5000);
+  11 |   await page.locator("//input[@type='tel']").fill("1234567890");
+  12 |   
+  13 |   //handle radio button
+  14 |  // await page.locator("//label[@id='rt']").click();
+  15 |  // await page.waitForTimeout(5000);
+  16 |   
+  17 | });
+  18 |
+  19 | test('get started link', async ({ page }) => {
+  20 |   await page.goto('https://playwright.dev/');
+  21 |
+  22 |   // Click the get started link.
+  23 |   await page.getByRole('link', { name: 'Get started' }).click();
+  24 |
+  25 |   // Expects page to have a heading with the name of Installation.
+  26 |   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  27 | });
+  28 |
+```

@@ -1,0 +1,268 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: @SmokeRegression Hide or Visible Concept
+- Location: C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:151:10
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('#hide-textbox')
+    - locator resolved to <input value="Hide" type="submit" id="hide-textbox" onclick="hideElement()" class="btn-style class2"/>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <th>Course</th> from <div class="left-align">…</div> subtree intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <fieldset>…</fieldset> from <div class="block large-row-spacer">…</div> subtree intercepts pointer events
+  2 × retrying click action
+      - waiting 100ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <header class="jumbotron text-center header_style">…</header> intercepts pointer events
+  5 × retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <th>Course</th> from <div class="left-align">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <fieldset>…</fieldset> from <div class="block large-row-spacer">…</div> subtree intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <header class="jumbotron text-center header_style">…</header> intercepts pointer events
+    - retrying click action
+      - waiting 500ms
+      - waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <header class="jumbotron text-center header_style">…</header> intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <th>Course</th> from <div class="left-align">…</div> subtree intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+    at C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:156:45
+```
+
+# Test source
+
+```ts
+   56 |     await page.fill("#last-name","kumar");
+   57 |     await page.fill("#postal-code","566660");
+   58 |     await page.click("#continue");
+   59 |     await page.click("//button[text()='Finish']");
+   60 |     await expect(page.locator('.complete-header')).toHaveText('Thank you for your order');
+   61 |     await page.pause();
+   62 | });
+   63 |
+   64 |
+   65 | test('TC017-Verify Sorting items from low to high',async({page})=>{
+   66 |     await login(page);
+   67 |     //await page.pause();
+   68 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   69 |     await dropdown.selectOption('lohi');
+   70 |     await page.waitForTimeout(5000);
+   71 |
+   72 |     //validation 
+   73 | });
+   74 |
+   75 | test('TC018-Verify Sorting items from high to low',async({page})=>{
+   76 |     await login(page);
+   77 |     await page.pause();
+   78 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   79 |     await dropdown.selectOption('hilo');
+   80 |     await page.waitForTimeout(5000);
+   81 | });
+   82 |
+   83 | test('TC019-Verify Sorting items from z to a',async({page})=>{
+   84 |     await login(page);
+   85 |     //await page.pause();
+   86 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   87 |     await dropdown.selectOption('za');
+   88 |     await page.waitForTimeout(5000);
+   89 | });
+   90 | test('TC016-	Go to about page of Sauce demo and verify the url ',async({page})=>{
+   91 |     await login(page);
+   92 |     await page.locator("//button[@id='react-burger-menu-btn']").click();
+   93 |     await page.click('#about_sidebar_link');
+   94 |     await expect(page).toHaveURL('https://saucelabs.com/');
+   95 | });
+   96 |
+   97 |
+   98 | test('Login Functionality',async({page})=>{
+   99 |
+  100 | // playwright scripts 
+  101 | await login(page);
+  102 |
+  103 | await page.waitForSelector("#inventory_container");
+  104 | await page.screenshot({path:"dashboard.png"});
+  105 | await page.click("#add-to-cart-sauce-labs-backpack");
+  106 | await page.click("#shopping_cart_container");
+  107 |
+  108 | await page.screenshot({path:"cartpage.png"});
+  109 | //await page.pause();
+  110 | await page.click("#checkout");
+  111 | await page.fill("#first-name","sandeep");
+  112 | await page.fill("#last-name","kumar");
+  113 | await page.fill("#postal-code","566660");
+  114 | await page.click("#continue");
+  115 | await page.click("//button[text()='Finish']");
+  116 | //await page.pause();
+  117 |
+  118 | await expect(page.locator('.complete-header')).toHaveText('Thank you for your order!');
+  119 |
+  120 | });
+  121 |
+  122 | test('Sample Test', async ({ page }) => {
+  123 |     await page.goto('https://playwright.dev/');
+  124 |     await expect(page.locator('text=Get Started')).toBeVisible();
+  125 |     });
+  126 |
+  127 |     test('Sample Test1', async ({ page }) => {
+  128 |         await page.goto('https://www.saucedemo.com/');
+  129 |
+  130 |
+  131 |
+  132 |         await page.getByPlaceholder('Username').fill('standard_user');
+  133 |         await page.getByPlaceholder('Password').fill('secret_sauce');
+  134 |         await page.getByRole('button', { name: 'Login' }).click();
+  135 |         
+  136 |         
+  137 |         await page.pause();
+  138 |     });
+  139 |
+  140 |     test.only('Inbuilt Playwright locators',async({page})=>{
+  141 |        
+  142 |         await page.goto('https://paytm.com/recharge');
+  143 |         await page.waitForTimeout(2000);
+  144 |         await page.locator("//label[normalize-space()='Postpaid']").click();
+  145 |         await page.waitForTimeout(2000);
+  146 |         await page.locator("//label[normalize-space()='Prepaid']").click();
+  147 |
+  148 |        
+  149 |     });
+  150 |
+  151 |     test.only('@SmokeRegression Hide or Visible Concept',async({page})=>{
+  152 |        
+  153 |         await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+  154 |         await page.waitForTimeout(5000);
+  155 |         await expect(page.locator("#displayed-text")).toBeVisible();
+> 156 |         await page.locator("#hide-textbox").click();
+      |                                             ^ Error: locator.click: Target page, context or browser has been closed
+  157 |         await page.waitForTimeout(5000);
+  158 |         await expect(page.locator("#displayed-text")).toBeHidden();
+  159 |
+  160 |        
+  161 |     });
+  162 |
+  163 |     
+  164 |     test.only('Navigation ',async({page})=>{
+  165 |        
+  166 |         await page.goto('https://paytm.com/recharge');
+  167 |         await page.goto("https://paytm.com");
+  168 |         await page.goBack();
+  169 |         await page.goForward();
+  170 |         await page.locator("//label[normalize-space()='Postpaid']").click();
+  171 |         await page.waitForTimeout(2000);
+  172 |         await page.locator("//label[normalize-space()='Prepaid']").click();
+  173 |
+  174 |        
+  175 |     });
+  176 |
+  177 |     test.only('Navigation methods ',async({page})=>{
+  178 |        
+  179 |         await page.goto('https://paytm.com/recharge');
+  180 |         await page.goto("https://paytm.com");
+  181 |         await page.goBack();
+  182 |         await page.goForward();
+  183 |         await page.locator("//label[normalize-space()='Postpaid']").click();
+  184 |         await page.waitForTimeout(2000);
+  185 |         await page.locator("//label[normalize-space()='Prepaid']").click();
+  186 |
+  187 |        
+  188 |     });
+  189 |
+  190 |     test.only("Java Dailog",async({page})=>{
+  191 |         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  192 |         
+  193 |        // await page.locator("//input[@id='alertbtn']").click();
+  194 |        //page.on('dialog',dialog=>dialog.accept());
+  195 |        await page.locator("//input[@id='confirmbtn']").click();
+  196 |        page.on('dialog',dialog=>dialog.dismiss());
+  197 |        await page.waitForTimeout(2000);
+  198 |         //await page.locator("//a[@id='opentab']").click();
+  199 |     
+  200 |     });
+  201 |
+  202 |     test.only("@Smoke dyanamic dropdown and webtable",async({page})=>{
+  203 |         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  204 |         const rowCount=await page.locator("//table[@name='courses']//tr").count();
+  205 |         console.log(rowCount);
+  206 |         const columnCount=await page.locator("//table[@name='courses']//th").count();
+  207 |         console.log(columnCount);
+  208 |         
+  209 |         console.log(await page.locator("//table[@name='courses']//td").allTextContents());
+  210 |         await page.locator("//input[@id='autocomplete']").pressSequentially("British Indian Ocean Te");
+  211 |     
+  212 |     });
+  213 |
+  214 |
+  215 |     test.only("iframe example",async({page})=>{
+  216 |         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  217 |         //await page.locator("li[class='current'] a[class='new-navbar-highlighter']").click();
+  218 |        
+  219 |        const framePage= page.frameLocator("#courses-iframe")
+  220 |        await framePage.locator("li a[href='lifetime-access']:visible").click();
+  221 |        await framePage.locator("//th[@class='text-center bronze-plan border-0 pb-5']//button[@class='btn btn-block btn-outline-primary btn-rounded'][normalize-space()='ENROLL']").click();
+  222 |        
+  223 |     });
+  224 |
+  225 | test('10 minutes timer',async({browser})=>{
+  226 |    const context= await browser.newContext();
+  227 |   const page=await context.newPage();
+  228 |   await page.goto('https://vclock.com/set-timer-for-10-minutes/');
+  229 |   await expect(page).toHaveTitle('Google');
+  230 |  //console.log(await page.title());
+  231 |  console.log(await page.locator("//h1[@id='lbl-title']").textContent());
+  232 |
+  233 |   
+  234 |
+  235 |
+  236 | })
+  237 |
+  238 |
+  239 |
+```

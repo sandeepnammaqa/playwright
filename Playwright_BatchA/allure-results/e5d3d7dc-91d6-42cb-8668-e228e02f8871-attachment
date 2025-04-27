@@ -1,0 +1,531 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Navigation methods 
+- Location: C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:177:10
+
+# Error details
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//label[normalize-space()=\'Postpaid\']')
+
+    at C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:183:69
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Paytm Logo":
+    - img "Paytm Logo"
+  - list:
+    - listitem: Ticket Booking
+    - listitem: Recharge & Bills
+    - listitem: Payments & Services
+    - listitem: Paytm for Business
+    - listitem: Company
+  - img "Download App"
+  - text: Download App
+  - img "user"
+  - text: Sign In
+- navigation:
+  - link "Flights Flights":
+    - img "Flights"
+    - text: Flights
+  - link "Bus Bus":
+    - img "Bus"
+    - text: Bus
+  - link "Trains Trains":
+    - img "Trains"
+    - text: Trains
+  - link "Intl. Flights Intl. Flights":
+    - img "Intl. Flights"
+    - text: Intl. Flights
+- img "travelLogo"
+- radio "One Way" [checked]
+- text: One Way
+- radio "Round Trip"
+- text: Round Trip From Delhi (DEL)
+- img "arrow"
+- text: To Mumbai (BOM) Depart Thu, 24 Apr 25 Return Add Return Passenger & Class 1 Traveller, Economy
+- button "Search Flights"
+- text: Special Fares (optional)
+- img "rupeeSymbolGreeenBg"
+- text: Extra Savings
+- button "Armed Forces Up to ₹600 off"
+- button "Student Extra Baggage"
+- button "Senior Citizen Up to ₹600 off"
+- img "arrow"
+- list
+- img "arrow"
+- text: Recharges
+- link "Mobile Recharge Mobile Recharge":
+  - img "Mobile Recharge"
+  - text: Mobile Recharge
+- link "DTH Recharge DTH Recharge":
+  - img "DTH Recharge"
+  - text: DTH Recharge
+- link "FasTag Recharge FasTag Recharge":
+  - img "FasTag Recharge"
+  - text: FasTag Recharge
+- link "View All Products View All Products":
+  - img "View All Products"
+  - text: View All Products
+- link
+- text: Bill Payments
+- link "Credit Card Payment Credit Card Payment":
+  - img "Credit Card Payment"
+  - text: Credit Card Payment
+- link "Electricity Bill Electricity Bill":
+  - img "Electricity Bill"
+  - text: Electricity Bill
+- link "Broadband Bill Broadband Bill":
+  - img "Broadband Bill"
+  - text: Broadband Bill
+- link "View All Products View All Products":
+  - img "View All Products"
+  - text: View All Products
+- link
+- img "brandLogo"
+- text: Build Long-term Wealth & Achieve your Goals. Investing on Paytm Money is transparent, low-cost and commission-free. Buy stocks & mutual funds that can help you create wealth & realise your dreams.
+- link "Learn More ->"
+- img "brand"
+- link "paytmLogo 24x7 Trusted customer support to assist and help you in every step of your journey Learn More ->":
+  - img "paytmLogo"
+  - text: 24x7 Trusted customer support to assist and help you in every step of your journey Learn More ->
+- img "logo"
+- text: One destination for Credit Cards Paytm HDFC, SBI Card & Axis Bank Credit Card with assured Cashback and incredible offers.
+- link "Apply Now ->"
+- img "link"
+- img "brand"
+- img "logo"
+- text: Insurance made easy. Buying insurance does not have to be tedious, time-consuming & confusing. Paytm Insurance removes the worry of getting insured by making it simple, convenient & easy-to-understand.
+- link "Get It Now ->"
+- img "brand"
+- img "brandLogo"
+- text: Pay anyone directly from your bank account. Pay anyone, everywhere. Make contactless & secure payments in-stores or online using Paytm UPI or Directly from your Bank Account. Plus, send & receive money from anyone.
+- link "link":
+  - img "link"
+- link "link":
+  - img "link"
+- img "brand"
+- img "brandLogo"
+- text: Accept payments online & offline Millions of small & big businesses use Paytm to accept payments anywhere any time with a wide range of solutions for all kind of merchants
+- link "Learn More ->"
+- img "brand"
+- contentinfo:
+  - text: Investor Relations
+  - img "plus"
+  - text: Home Financials Filings & Press Releases News & Events Corporate Governance Resources More about Paytm
+  - img "plus"
+  - heading "Paytm - India's Most Trusted Platform for BHIM UPI Payments, Money Transfers, Recharges, and other online payments" [level=1]
+  - paragraph: Paytm - India’s largest digital payment app makes it secure and seamless to pay using UPI, make bill payments, recharge mobiles, DTH, data card & Metro Card etc anywhere in India.
+  - heading "Pay Using Paytm UPI with Ease" [level=2]
+  - paragraph: Experience the epitome of convenience with Paytm's flawless UPI integration. Whether you're sending money to a friend, shopkeeper, or family, or making a purchase online, our user-friendly interface ensures a hassle-free experience. Enjoy swift and secure transactions with just a few taps, as we've streamlined the process to fit seamlessly into your busy lifestyle.
+  - paragraph: Stay in the loop with instant notifications on your transactions. Receive alerts for every payment, ensuring you're always in control of your finances. Our commitment to transparency empowers you with real-time updates, giving you the confidence that each transaction is executed with precision.
+  - heading "Pay All Your Bills with Paytm Anytime, Anywhere" [level=2]
+  - paragraph: Your one-stop solution for effortlessly managing and paying all your bills online. We understand the complexities of modern life, and our mission is to simplify the way you handle your financial responsibilities. With our user-friendly platform, you can easily pay your electricity, landline, water, phone bills, and more in just a few clicks. No more juggling multiple accounts or standing in long queues—Paytm consolidates all your bill payments into a convenient digital hub. Embrace convenience with Paytm and enjoy the ease of managing your bills in the digital age.
+  - paragraph:
+    - text: Effortlessly make mobile bill payments through our safe methods, processed through secured gateways for
+    - link "Airtel Recharge"
+    - text: ","
+    - link "Jio Recharge"
+    - text: ","
+    - link "Vodafone Idea Recharge"
+    - text: ","
+    - link "MTNL Recharge"
+    - text: ","
+    - link "BSNL Recharge"
+    - text: and more. You can also pay landline bills of Airtel, BSNL, Hathway, Asianet Broadband, Alliance Broadband, Tata Play Fibre.
+  - paragraph:
+    - text: Recharge your DTH online with ease. From
+    - link "Tata Play recharge"
+    - text: ","
+    - link "Airtel DTH recharge"
+    - text: ","
+    - link "Videocon D2H recharge"
+    - text: ","
+    - link "Sun Direct recharge"
+    - text: ", to"
+    - link "Dish TV recharge"
+    - text: and more just on Paytm.
+  - paragraph:
+    - text: Got a data card to recharge? We've got your back there too. Get your
+    - link "Airtel Data Card Recharge"
+    - text: ","
+    - link "Vodafone Idea Data Card Recharge"
+    - text: ","
+    - link "Jio Data Card Recharge"
+    - text: ","
+    - link "BSNL Data Card Recharge"
+    - text: and
+    - link "MTNL Data Card Recharge"
+    - text: now on Paytm.
+  - paragraph:
+    - strong: Make electricity bill payment
+    - text: "? Pay your"
+    - link "electricity bills online"
+    - text: on Paytm and avoid waiting in queues for hours. Whether you want to make
+    - link "Goa Electricity Bill Payment"
+    - text: ","
+    - link "Bihar Electricity Bill Payment"
+    - text: ","
+    - link "Haryana Electricity Bill Payment"
+    - text: ","
+    - link "Maharashtra Electricity Bill Payment"
+    - text: ","
+    - link "Punjab Electricity Bill Payment"
+    - text: ", or"
+    - link "Telangana Electricity Bill Payment"
+    - text: ", we've got you covered."
+  - paragraph:
+    - strong: Make Gas, Water And Municipal Bill Payment
+    - text: "? Pay your gas, water and"
+    - link "municipal bills"
+    - text: within seconds for
+    - link "Delhi Jal Board"
+    - text: ", Indore Municipal Corporation, Gwalior Municipal Corporation,"
+    - link "Bhopal Municipal Corporation"
+    - text: ","
+    - link "Bangalore Water Supply and Sewage Board"
+    - text: ", Surat Municipal Corporation, Pune Municipal Corporation,"
+    - link "Nagpur Municipal Corporation"
+    - text: ","
+    - link "Uttrakhand Jal Sansthan"
+    - text: ","
+    - link "Indraprastha Gas Limited"
+    - text: ","
+    - link "Gujarat Gas Limited"
+    - text: ", Adani Gas Limited,"
+    - link "Aavantika Gas Limited"
+    - text: ","
+    - link "Vadodara Gas Limited"
+    - text: ","
+    - link "Maharashtra Natural Gas Ltd"
+    - text: and more.
+  - heading "Book Online Tickets - Flight Tickets, Train Tickets & Bus Tickets with Ease" [level=2]
+  - paragraph:
+    - text: Save money and time by booking your travel tickets on Paytm. You can find
+    - link "cheap flight tickets"
+    - text: ", train tickets, and bus tickets on Paytm. Compare the prices, get schedules, pick the best-suited seat, and experience easy ticket booking services online. You can also save money on your travel by applying promo codes on flights, buses & trains to get cashback in your Paytm UPI on your travel tickets."
+  - paragraph:
+    - strong: Flight Tickets
+    - text: "- Just enter your boarding and destination city to know all the flight ticket prices for both"
+    - link "domestic flights"
+    - text: and
+    - link "international flights"
+    - text: .
+  - paragraph:
+    - strong: Train Ticket Booking
+    - text: "-"
+    - link "Check PNR status"
+    - text: ", find train schedule, and"
+    - link "get train seat availability"
+    - text: for your online
+    - link "train ticket bookings"
+    - text: . Just enter your boarding and destination station or city to know all the train ticket prices. Make instant train reservations through Paytm and save money with cashback.
+  - paragraph:
+    - text: Bus Tickets- Make fast online
+    - link "bus ticket booking"
+    - text: for both AC and non-AC buses, private and government buses on Paytm. Find all the buses and timings along with
+    - link "bus ticket offers"
+    - text: for your bus tickets.
+  - heading "Book Events, Movies, and Endless Entertainment with Paytm" [level=2]
+  - paragraph:
+    - text: Relive the moment and revive your daily routine with an amazing experience at an incredible amusement park. Find movie showtimes, and movie theaters to book your
+    - link "movie tickets online"
+    - text: and get movie ticket offers.
+  - paragraph: Enjoy the hottest buzz in the town, and do not miss out on the latest shows and events of your favorite artists, be it a music concert or booking a ticket to your favorite standup comedy show, you can do it all without hassle on Paytm. Our entertainment section enables you to book tickets online for Movies and Events in a matter of a few clicks and escape from your busy schedule.
+  - img "24X7 Help"
+  - text: 24X7 Help If we fall short of your expectations in any way, let us know.
+  - img "100% Assurance"
+  - text: 100% Assurance If you face any issue, your money is immediately refunded. Sit back shop on.
+  - img "Paytm Trust"
+  - text: Paytm Trust Your money is yours. All refunds come with no question asked guarantee.
+  - link "About Us"
+  - link "24x7 Help"
+  - link "Partner with us"
+  - link "Grievance policy"
+  - link "Blog"
+  - link "Bug bounty"
+  - link "Privacy"
+  - link "Terms & Conditions"
+  - link "Become a Seller & Earn"
+  - link "Paytm for Business"
+  - text: Be Safe. Be Vigilant
+  - paragraph: Please do not share your Paytm password, Credit/Debit card pin, other confidential information with anyone even if he/she claims to be from Paytm. We advise our customers to completely ignore such communications & report to us at cybercell@paytmbank.com
+  - text: Disclaimers
+  - paragraph: Cashback is 'Paytm loyalty cashback' given by 'Pay with Paytm' payment platform. It can be used to pay for goods & services sold by merchants that accept 'Pay with Paytm'
+  - text: Bank Grade Security with
+  - img "American Express"
+  - img "Diners Club"
+  - img "PCI"
+  - img "VISA"
+  - img "Rupay"
+  - img "Master Card"
+  - text: Company
+  - img "plus"
+  - link "About Us"
+  - link "CSR"
+  - link "Blog"
+  - link "Contact Us"
+  - link "Terms & Conditions"
+  - text: Sustainability
+  - link "UPI Payment App (Android)"
+  - link "UPI Payment App (iOS)"
+  - link "Career"
+  - text: Recharge & pay bills
+  - img "plus"
+  - text: Mobile Recharge Mobile Bill Payment Datacard Recharge Datacard Bill Payment Dth Recharge Electricity Bill Payment Landline Bill Payment Broadband Bill Payment Gas Bill Payment Water Bill Payment Metro Card Recharge Municipal Recharge Toll Recharge Credit Bill Payment Cabletv Recharge Devotion Fastag Recharge
+  - link "Recharge & Bill Payments App (Android)"
+  - link "Recharge & Bill Payments App (iOS)"
+  - text: Pay Loan EMI, Insurance Premiums & Education Fee
+  - img "plus"
+  - text: Pay Loan EMI Pay Insurance Premium Book Travel & Entertainment
+  - img "plus"
+  - text: Movie Ticket Booking Bus Ticket Booking Flight Tickets Booking Train Ticket Booking Upcoming Movies
+  - link "Trains Sitemap"
+  - link "Bus Sitemap"
+  - link "Flight Tickets Booking App (Android)"
+  - link "Flight Tickets Booking App (iOS)"
+  - link "Bus Tickets Booking App (Android)"
+  - link "Bus Tickets Booking App (iOS)"
+  - link "Train Tickets Booking App (Android)"
+  - link "Train Tickets Booking App (iOS)"
+  - text: Investments & Miscellaneous
+  - img "plus"
+  - text: Mutual Fund Investments
+  - link "Fee Payment"
+  - link "Google Play Recharge"
+  - link "QR Code Scanner"
+  - link "Train Tickets"
+  - link "Paytm Service Agent"
+  - link "Paytm Careers"
+  - link "Free Credit Score"
+  - link "Investments App (Android)"
+  - link "Investments App (iOS)"
+  - link "Apply for Field Sales Executive Job"
+  - link "Become a Paytm Ambassador"
+  - text: Loans and Credit Cards
+  - img "plus"
+  - link "Postpaid"
+  - text: Credit Cards
+  - link "Personal Loan"
+  - link "Credit Report"
+  - link "Loan & Credit Cards App (Android)"
+  - link "Loan & Credit Cards App (iOS)"
+  - text: Financial Tools & Calculators
+  - img "plus"
+  - link "EMI Calculator"
+  - link "Personal Loan EMI Calculator"
+  - link "Home Loan EMI Calculator"
+  - link "Car Loan EMI Calculator"
+  - link "IFSC Code Finder"
+  - link "Financial Tools & Calculators"
+  - link "Currency Converter"
+  - link "List of Currencies"
+  - link "Currency Converter Sitemap"
+  - link "IFSC Code Sitemap"
+  - link "Income Tax Calculator"
+  - link "HRA Calculator"
+  - link "PPF Calculator"
+  - link "Gratuity Calculator"
+  - link "NPS Calculator"
+  - link "Sukanya Samriddhi Yojana Calculator"
+  - link "EPF Calculator"
+  - link "APY Calculator"
+  - link "Retirement Calculator"
+  - link "SIP Calculator"
+  - link "Mutual Fund Calculator"
+  - link "Lumpsum Calculator"
+  - link "SWP Calculator"
+  - link "FD Calculator"
+  - link "RD Calculator"
+  - link "GST Calculator"
+  - link "Compound Interest Calculator"
+  - link "Simple Interest Calculator"
+  - link "Educational Loan EMI Calculator"
+  - link "Finance App (Android)"
+  - link "Finance App (iOS)"
+  - text: © 2025 Paytm Follow Us
+  - link "Facebook":
+    - img "Facebook"
+  - link "Twitter":
+    - img "Twitter"
+  - link "Youtube":
+    - img "Youtube"
+  - link "LinkedIn":
+    - img "LinkedIn"
+  - link "Instagram":
+    - img "Instagram"
+```
+
+# Test source
+
+```ts
+   83 | test('TC019-Verify Sorting items from z to a',async({page})=>{
+   84 |     await login(page);
+   85 |     //await page.pause();
+   86 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   87 |     await dropdown.selectOption('za');
+   88 |     await page.waitForTimeout(5000);
+   89 | });
+   90 | test('TC016-	Go to about page of Sauce demo and verify the url ',async({page})=>{
+   91 |     await login(page);
+   92 |     await page.locator("//button[@id='react-burger-menu-btn']").click();
+   93 |     await page.click('#about_sidebar_link');
+   94 |     await expect(page).toHaveURL('https://saucelabs.com/');
+   95 | });
+   96 |
+   97 |
+   98 | test('Login Functionality',async({page})=>{
+   99 |
+  100 | // playwright scripts 
+  101 | await login(page);
+  102 |
+  103 | await page.waitForSelector("#inventory_container");
+  104 | await page.screenshot({path:"dashboard.png"});
+  105 | await page.click("#add-to-cart-sauce-labs-backpack");
+  106 | await page.click("#shopping_cart_container");
+  107 |
+  108 | await page.screenshot({path:"cartpage.png"});
+  109 | //await page.pause();
+  110 | await page.click("#checkout");
+  111 | await page.fill("#first-name","sandeep");
+  112 | await page.fill("#last-name","kumar");
+  113 | await page.fill("#postal-code","566660");
+  114 | await page.click("#continue");
+  115 | await page.click("//button[text()='Finish']");
+  116 | //await page.pause();
+  117 |
+  118 | await expect(page.locator('.complete-header')).toHaveText('Thank you for your order!');
+  119 |
+  120 | });
+  121 |
+  122 | test('Sample Test', async ({ page }) => {
+  123 |     await page.goto('https://playwright.dev/');
+  124 |     await expect(page.locator('text=Get Started')).toBeVisible();
+  125 |     });
+  126 |
+  127 |     test('Sample Test1', async ({ page }) => {
+  128 |         await page.goto('https://www.saucedemo.com/');
+  129 |
+  130 |
+  131 |
+  132 |         await page.getByPlaceholder('Username').fill('standard_user');
+  133 |         await page.getByPlaceholder('Password').fill('secret_sauce');
+  134 |         await page.getByRole('button', { name: 'Login' }).click();
+  135 |         
+  136 |         
+  137 |         await page.pause();
+  138 |     });
+  139 |
+  140 |     test.only('Inbuilt Playwright locators',async({page})=>{
+  141 |        
+  142 |         await page.goto('https://paytm.com/recharge');
+  143 |         await page.waitForTimeout(2000);
+  144 |         await page.locator("//label[normalize-space()='Postpaid']").click();
+  145 |         await page.waitForTimeout(2000);
+  146 |         await page.locator("//label[normalize-space()='Prepaid']").click();
+  147 |
+  148 |        
+  149 |     });
+  150 |
+  151 |     test.only('Hide or Visible Concept',async({page})=>{
+  152 |        
+  153 |         await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
+  154 |         await page.waitForTimeout(5000);
+  155 |         await expect(page.locator("#displayed-text")).toBeVisible();
+  156 |         await page.locator("#hide-textbox").click();
+  157 |         await page.waitForTimeout(5000);
+  158 |         await expect(page.locator("#displayed-text")).toBeHidden();
+  159 |
+  160 |        
+  161 |     });
+  162 |
+  163 |     
+  164 |     test.only('Navigation ',async({page})=>{
+  165 |        
+  166 |         await page.goto('https://paytm.com/recharge');
+  167 |         await page.goto("https://paytm.com");
+  168 |         await page.goBack();
+  169 |         await page.goForward();
+  170 |         await page.locator("//label[normalize-space()='Postpaid']").click();
+  171 |         await page.waitForTimeout(2000);
+  172 |         await page.locator("//label[normalize-space()='Prepaid']").click();
+  173 |
+  174 |        
+  175 |     });
+  176 |
+  177 |     test.only('Navigation methods ',async({page})=>{
+  178 |        
+  179 |         await page.goto('https://paytm.com/recharge');
+  180 |         await page.goto("https://paytm.com");
+  181 |         await page.goBack();
+  182 |         await page.goForward();
+> 183 |         await page.locator("//label[normalize-space()='Postpaid']").click();
+      |                                                                     ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  184 |         await page.waitForTimeout(2000);
+  185 |         await page.locator("//label[normalize-space()='Prepaid']").click();
+  186 |
+  187 |        
+  188 |     });
+  189 |
+  190 |     test.only("Java Dailog",async({page})=>{
+  191 |         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  192 |         
+  193 |        // await page.locator("//input[@id='alertbtn']").click();
+  194 |        //page.on('dialog',dialog=>dialog.accept());
+  195 |        await page.locator("//input[@id='confirmbtn']").click();
+  196 |        page.on('dialog',dialog=>dialog.dismiss());
+  197 |        await page.waitForTimeout(2000);
+  198 |         //await page.locator("//a[@id='opentab']").click();
+  199 |     
+  200 |     });
+  201 |
+  202 |     test.only("dyanamic dropdown and webtable",async({page})=>{
+  203 |         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  204 |         const rowCount=await page.locator("//table[@name='courses']//tr").count();
+  205 |         console.log(rowCount);
+  206 |         const columnCount=await page.locator("//table[@name='courses']//th").count();
+  207 |         console.log(columnCount);
+  208 |         
+  209 |         console.log(await page.locator("//table[@name='courses']//td").allTextContents());
+  210 |         await page.locator("//input[@id='autocomplete']").pressSequentially("British Indian Ocean Te");
+  211 |     
+  212 |     });
+  213 |
+  214 |
+  215 |     test.only("iframe example",async({page})=>{
+  216 |         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  217 |         //await page.locator("li[class='current'] a[class='new-navbar-highlighter']").click();
+  218 |        
+  219 |        const framePage= page.frameLocator("#courses-iframe")
+  220 |        await framePage.locator("li a[href='lifetime-access']:visible").click();
+  221 |        await framePage.locator("//th[@class='text-center bronze-plan border-0 pb-5']//button[@class='btn btn-block btn-outline-primary btn-rounded'][normalize-space()='ENROLL']").click();
+  222 |        
+  223 |     });
+  224 |
+  225 | test('10 minutes timer',async({browser})=>{
+  226 |    const context= await browser.newContext();
+  227 |   const page=await context.newPage();
+  228 |   await page.goto('https://vclock.com/set-timer-for-10-minutes/');
+  229 |   await expect(page).toHaveTitle('Google');
+  230 |  //console.log(await page.title());
+  231 |  console.log(await page.locator("//h1[@id='lbl-title']").textContent());
+  232 |
+  233 |   
+  234 |
+  235 |
+  236 | })
+  237 |
+  238 |
+  239 |
+```

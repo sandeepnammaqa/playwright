@@ -1,0 +1,435 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Inbuild Playwright locators
+- Location: C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:140:10
+
+# Error details
+
+```
+Error: locator.check: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByLabel('link')
+
+    at C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\magento.spec.js:143:57
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Paytm Logo":
+    - img "Paytm Logo"
+  - list:
+    - listitem: Ticket Booking
+    - listitem: Recharge & Bills
+    - listitem: Payments & Services
+    - listitem: Paytm for Business
+    - listitem: Company
+  - img "Download App"
+  - text: Download App
+  - img "user"
+  - text: Sign In
+- list:
+  - listitem:
+    - link "image Prepaid/Postpaid":
+      - img "image"
+      - text: Prepaid/Postpaid
+  - listitem:
+    - link "image Electricity":
+      - img "image"
+      - text: Electricity
+  - listitem:
+    - link "image DTH":
+      - img "image"
+      - text: DTH
+  - listitem:
+    - link "image Metro":
+      - img "image"
+      - text: Metro
+  - listitem:
+    - link "image Broadband/Landline":
+      - img "image"
+      - text: Broadband/Landline
+  - listitem:
+    - link "image Education":
+      - img "image"
+      - text: Education
+  - listitem:
+    - link "image Pay Loan":
+      - img "image"
+      - text: Pay Loan
+  - listitem:
+    - link "image Invest in Stocks":
+      - img "image"
+      - text: Invest in Stocks
+  - listitem:
+    - link "image Book a Cylinder":
+      - img "image"
+      - text: Book a Cylinder
+  - listitem:
+    - link "image Paytm First":
+      - img "image"
+      - text: Paytm First
+  - listitem:
+    - link "image Insurance/LIC Premium":
+      - img "image"
+      - text: Insurance/LIC Premium
+  - listitem:
+    - link " More"
+- text: Recharge or Pay Mobile Bill
+- radio "Prepaid" [checked]
+- text: Prepaid
+- radio "Postpaid"
+- text: Postpaid
+- list:
+  - listitem:
+    - textbox
+    - text: Mobile Number
+  - listitem:
+    - textbox
+    - text: Operator
+  - listitem:
+    - textbox
+    - text: Amount Browse Plans of all operators
+- button "Proceed to Recharge"
+- text: Select an Operator
+- list:
+  - listitem:
+    - link "Airtel Recharge"
+  - listitem:
+    - link "BSNL Recharge"
+  - listitem:
+    - link "Jio Recharge"
+  - listitem:
+    - link "MTNL Recharge"
+  - listitem:
+    - link "Vi Recharge"
+- contentinfo:
+  - text: Investor Relations
+  - img "plus"
+  - text: Home Financials Filings & Press Releases News & Events Corporate Governance Resources More about Paytm
+  - img "plus"
+  - link "Home"
+  - text: ">Mobile Recharge"
+  - heading "Online Recharge | Instant and Easy Online Mobile Recharge at Paytm" [level=1]
+  - paragraph: Mobile phones have become an essential part of our lives, and to keep the calling, internet and other facilities going, we need to make our mobile recharge on time. Paytm provides you with an effortless experience of making online mobile recharge for Airtel, BSNL, Jio, Vodafone Idea (also known as Vi) and MTNL. You can get your mobile recharge online done easily & instantly with a few simple steps. With a massive customer base of over 450 million users across the country, Paytm is your one-stop destination for online mobile recharge. Talk to your loved ones endlessly without worrying about running out of balance, keep up with your work from home schedules and a lot more. Check latest recharge plans and get many exciting recharge cashback offers at any time and from anywhere.
+  - heading "Instant Online Recharge For Airtel, Vi, Jio, BSNL & MTNL" [level=2]
+  - paragraph: Paytm is the leading mobile recharge platform of our country for Airtel, Vi, BSNL, MTNL and Jio. Paytm gives immense ease as all you have to do is to enter your mobile number and it will fetch your operator and your circle automatically. You can browse through all the latest recharge plans and also save money with the help of scratchcards and get cashback offers. Paytm’s speedy online services and flawless customer care support ensures you the best user experience. Enjoy the convenience and handiness of making a mobile recharge from your place & stay connected to your friends, family & colleagues all time of the day. Paytm not just provides you with a simple way to make a phone recharge but also ensures a fast and secure transaction.
+  - heading "Get Exclusive Paytm Recharge Offers & Cashback" [level=2]
+  - paragraph:
+    - text: Paytm provides many daily and occasional promo codes and cashback through Paytm
+    - link "recharge offers"
+    - text: for all the Paytm users. You can use LUCKY200 to get up to 100% cashback (maximum cashback is INR 100) on your online mobile recharge. The cashback comes in your Paytm wallet and you can use this Paytm money for future transactions, recharges, online shopping and much more. To make your experience the happiest one, we offer a bucket full of Scratchcards & Cashback offers with every prepaid mobile recharge you make with us.
+  - heading "Check Latest Recharge Plans & Get Exciting Offers At Paytm" [level=2]
+  - paragraph: You can find the best recharge offers and plans for all the major operators on Paytm such as- Jio recharge offers and plans, Airtel prepaid plans and offers, BSNL recharge plans and offers, Vi plans and offers etc. Just enter your mobile number and it will automatically fetch your operator and the circle. Browse through the list of plans and pick the most suited for making online recharge. Get Paytm mobile recharge offers and check all the latest plans and packages available for you to pick that best suits your balance & data requirements. Browse through the data plans, Full talk time (FTT) plans, 3G/4G data, 2G data, roaming plans, top-up plans, special recharge & many more and grab the best offers on all recharges.
+  - heading "How to Recharge Online on Paytm?" [level=3]
+  - paragraph:
+    - text: Paytm provides you with the simplest way to make a mobile recharge online without you having to leave the comfort of your own place. All you need to do is follow the steps given below- 1. Enter your prepaid mobile number 2. Select your mobile operator and circle if Paytm can’t detect automatically 3. Enter the amount 4. Now proceed with the payment, you can do so through Credit/ Debit Card, Net Banking or Paytm Wallet as per your choice, all our payment means are secure and protected That’s it, you are done with the Paytm online recharge! Paytm offers you flexible payment options for you to easily sail through our painless online recharge process. You are instantly notified about the phone recharge transaction through your registered mobile number and email-id. You can also make
+    - link "Airtel Recharge"
+    - text: "|"
+    - link "Vi Recharge"
+    - text: "|"
+    - link "MTNL Recharge"
+    - text: "|"
+    - link "BSNL Recharge"
+    - text: "| and"
+    - link "Jio Recharge"
+    - text: .
+  - heading "Frequently Asked Questions on Online Recharge" [level=3]
+  - heading "What are the current Paytm promo codes for mobile recharge?" [level=4]
+  - paragraph:
+    - text: You can get cashback up to 100% by using LUCKY200 for your phone recharge. Log onto Paytm.com or
+    - link "Paytm app"
+    - text: to get the best Paytm recharge offers today.
+  - heading "How to get cashback for prepaid recharge on Paytm?" [level=4]
+  - paragraph: Paytm provides daily cashback offers and scratchcards to all the Paytm users. Click on Apply Promocode before making the payment and check all the active promo codes. More than that you can buy Paytm gift vouchers to get additional cashback offers for your Paytm recharges, online shopping and for payment on many outlets.
+  - heading "Which is the best mobile recharge app?" [level=4]
+  - paragraph: Paytm app is the most trusted mobile recharge app of India. It provides hassle-free recharge services along with hundreds of deals and offers on a daily basis for your amazing experience. Check recharge plans and get amazing cashback offers on Paytm.
+  - heading "How can I recharge my mobile online with a debit card?" [level=4]
+  - paragraph: You can easily recharge your prepaid mobile number online through your debit card on Paytm.com or Paytm app. Follow these simple steps to get your recharge done through your debit card- 1. Enter your prepaid mobile number 2. Select your operator and circle if Paytm does not fetch it automatically 3. Apply promo code to get cashback on your recharge 4. Select debit card in the payment method 5. Enter your card details 6. Enter OTP that you will receive on your mobile, you will be done with it
+  - heading "How to cancel prepaid recharge in Paytm?" [level=4]
+  - paragraph: If you have entered the correct details and the recharge did not get proceeded, you can simply cancel your recharge request after two hours of placing the order. Go to “My Orders” in the “Profile” section in Paytm app and cancel your recharge order from there. You will get your refund within 24 hours.
+  - heading "What is Talktime in mobile recharge?" [level=4]
+  - paragraph: Talktime or talk time is a term that defines the duration one can talk on the cellular calls. Different prepaid recharge plans come with different Talktime. A user can select the right mobile recharge plan that fits his requirements perfectly.
+  - heading "How can I redeem Paytm cashback?" [level=4]
+  - paragraph: Paytm cashback money comes to your Paytm wallet directly. Therefore, you can utilize it for online payments, online shopping, other recharges and future transactions.
+  - heading "Popular Searches on Paytm" [level=4]
+  - paragraph:
+    - link "Check Credit Score"
+    - text: "|"
+    - link "Fastag Recharge"
+    - text: "|"
+    - link "DTH Recharge"
+    - text: "|"
+    - link "Electricity Bill Payment"
+    - text: "|"
+    - link "LIC Online Payment"
+    - text: "|"
+    - link "E Challan"
+    - text: "|"
+    - link "Movie Tickets Booking"
+    - text: "|"
+    - link "SBI Credit Card Payment"
+    - text: "|"
+    - link "Indane Gas Booking"
+  - img "24X7 Help"
+  - text: 24X7 Help If we fall short of your expectations in any way, let us know.
+  - img "100% Assurance"
+  - text: 100% Assurance If you face any issue, your money is immediately refunded. Sit back shop on.
+  - img "Paytm Trust"
+  - text: Paytm Trust Your money is yours. All refunds come with no question asked guarantee.
+  - link "About Us"
+  - link "24x7 Help"
+  - link "Partner with us"
+  - link "Grievance policy"
+  - link "Blog"
+  - link "Bug bounty"
+  - link "Privacy"
+  - link "Terms & Conditions"
+  - link "Become a Seller & Earn"
+  - link "Paytm for Business"
+  - text: Be Safe. Be Vigilant
+  - paragraph: Please do not share your Paytm password, Credit/Debit card pin, other confidential information with anyone even if he/she claims to be from Paytm. We advise our customers to completely ignore such communications & report to us at cybercell@paytmbank.com
+  - text: Disclaimers
+  - paragraph: Cashback is 'Paytm loyalty cashback' given by 'Pay with Paytm' payment platform. It can be used to pay for goods & services sold by merchants that accept 'Pay with Paytm'
+  - text: Bank Grade Security with
+  - img "American Express"
+  - img "Diners Club"
+  - img "PCI"
+  - img "VISA"
+  - img "Rupay"
+  - img "Master Card"
+  - text: Company
+  - img "plus"
+  - link "About Us"
+  - link "CSR"
+  - link "Blog"
+  - link "Contact Us"
+  - link "Terms & Conditions"
+  - text: Sustainability
+  - link "UPI Payment App (Android)"
+  - link "UPI Payment App (iOS)"
+  - text: Important Updates
+  - img "plus"
+  - link "Verified Latest Paytm News"
+  - link "Is Paytm banned by RBI?"
+  - link "What will happen to Paytm UPI after 29 Feb?"
+  - link "What will happen to Paytm App after 29 Feb?"
+  - link "What will happen to Paytm Wallet after 29 Feb?"
+  - link "Career"
+  - text: Recharge & pay bills
+  - img "plus"
+  - text: Mobile Recharge Mobile Bill Payment Datacard Recharge Datacard Bill Payment Dth Recharge Electricity Bill Payment Landline Bill Payment Broadband Bill Payment Gas Bill Payment Water Bill Payment Metro Card Recharge Municipal Recharge Toll Recharge Credit Bill Payment Cabletv Recharge Devotion Fastag Recharge
+  - link "Recharge & Bill Payments App (Android)"
+  - link "Recharge & Bill Payments App (iOS)"
+  - text: Pay Loan EMI, Insurance Premiums & Education Fee
+  - img "plus"
+  - text: Pay Loan EMI Pay Insurance Premium Book Travel & Entertainment
+  - img "plus"
+  - text: Movie Ticket Booking Bus Ticket Booking Flight Tickets Booking Train Ticket Booking Events Booking Upcoming Movies
+  - link "Trains Sitemap"
+  - link "Bus Sitemap"
+  - link "Flight Tickets Booking App (Android)"
+  - link "Flight Tickets Booking App (iOS)"
+  - link "Bus Tickets Booking App (Android)"
+  - link "Bus Tickets Booking App (iOS)"
+  - link "Train Tickets Booking App (Android)"
+  - link "Train Tickets Booking App (iOS)"
+  - text: Investments & Miscellaneous
+  - img "plus"
+  - text: Mutual Fund Investments
+  - link "Fee Payment"
+  - link "Google Play Recharge"
+  - link "QR Code Scanner"
+  - link "Train Tickets"
+  - link "Paytm Service Agent"
+  - link "Paytm Careers"
+  - link "Free Credit Score"
+  - link "Investments App (Android)"
+  - link "Investments App (iOS)"
+  - text: Loans and Credit Cards
+  - img "plus"
+  - link "Postpaid"
+  - text: Credit Cards
+  - link "Personal Loan"
+  - link "Credit Report"
+  - link "Loan & Credit Cards App (Android)"
+  - link "Loan & Credit Cards App (iOS)"
+  - text: Financial Tools & Calculators
+  - img "plus"
+  - link "EMI Calculator"
+  - link "Personal Loan EMI Calculator"
+  - link "Home Loan EMI Calculator"
+  - link "Car Loan EMI Calculator"
+  - link "IFSC Code Finder"
+  - link "Financial Tools & Calculators"
+  - link "Currency Converter"
+  - link "List of Currencies"
+  - link "Currency Converter Sitemap"
+  - link "IFSC Code Sitemap"
+  - link "Income Tax Calculator"
+  - link "HRA Calculator"
+  - link "PPF Calculator"
+  - link "Gratuity Calculator"
+  - link "NPS Calculator"
+  - link "Sukanya Samriddhi Yojana Calculator"
+  - link "EPF Calculator"
+  - link "APY Calculator"
+  - link "Retirement Calculator"
+  - link "SIP Calculator"
+  - link "Mutual Fund Calculator"
+  - link "Lumpsum Calculator"
+  - link "SWP Calculator"
+  - link "FD Calculator"
+  - link "RD Calculator"
+  - link "GST Calculator"
+  - link "Compound Interest Calculator"
+  - link "Simple Interest Calculator"
+  - link "Educational Loan EMI Calculator"
+  - link "Finance App (Android)"
+  - link "Finance App (iOS)"
+  - text: © 2025 Paytm Follow Us
+  - link "Facebook":
+    - img "Facebook"
+  - link "Twitter":
+    - img "Twitter"
+  - link "Youtube":
+    - img "Youtube"
+  - link "LinkedIn":
+    - img "LinkedIn"
+  - link "Instagram":
+    - img "Instagram"
+```
+
+# Test source
+
+```ts
+   43 |
+   44 |     
+   45 |
+   46 |
+   47 |     
+   48 | })
+   49 |
+   50 | test("TC014-Verify checkout process",async({page})=>{
+   51 |     await login(page);
+   52 |     await page.click("//button[@data-test='add-to-cart-sauce-labs-backpack']");
+   53 |     await page.click(".shopping_cart_badge");
+   54 |     await page.click("#checkout");
+   55 |     await page.fill("#first-name","sandeep");
+   56 |     await page.fill("#last-name","kumar");
+   57 |     await page.fill("#postal-code","566660");
+   58 |     await page.click("#continue");
+   59 |     await page.click("//button[text()='Finish']");
+   60 |     await expect(page.locator('.complete-header')).toHaveText('Thank you for your order');
+   61 |     await page.pause();
+   62 | });
+   63 |
+   64 |
+   65 | test('TC017-Verify Sorting items from low to high',async({page})=>{
+   66 |     await login(page);
+   67 |     //await page.pause();
+   68 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   69 |     await dropdown.selectOption('lohi');
+   70 |     await page.waitForTimeout(5000);
+   71 |
+   72 |     //validation 
+   73 | });
+   74 |
+   75 | test('TC018-Verify Sorting items from high to low',async({page})=>{
+   76 |     await login(page);
+   77 |     await page.pause();
+   78 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   79 |     await dropdown.selectOption('hilo');
+   80 |     await page.waitForTimeout(5000);
+   81 | });
+   82 |
+   83 | test('TC019-Verify Sorting items from z to a',async({page})=>{
+   84 |     await login(page);
+   85 |     //await page.pause();
+   86 |     const dropdown=await page.locator("//select[@class='product_sort_container']");
+   87 |     await dropdown.selectOption('za');
+   88 |     await page.waitForTimeout(5000);
+   89 | });
+   90 | test('TC016-	Go to about page of Sauce demo and verify the url ',async({page})=>{
+   91 |     await login(page);
+   92 |     await page.locator("//button[@id='react-burger-menu-btn']").click();
+   93 |     await page.click('#about_sidebar_link');
+   94 |     await expect(page).toHaveURL('https://saucelabs.com/');
+   95 | });
+   96 |
+   97 |
+   98 | test('Login Functionality',async({page})=>{
+   99 |
+  100 | // playwright scripts 
+  101 | await login(page);
+  102 |
+  103 | await page.waitForSelector("#inventory_container");
+  104 | await page.screenshot({path:"dashboard.png"});
+  105 | await page.click("#add-to-cart-sauce-labs-backpack");
+  106 | await page.click("#shopping_cart_container");
+  107 |
+  108 | await page.screenshot({path:"cartpage.png"});
+  109 | //await page.pause();
+  110 | await page.click("#checkout");
+  111 | await page.fill("#first-name","sandeep");
+  112 | await page.fill("#last-name","kumar");
+  113 | await page.fill("#postal-code","566660");
+  114 | await page.click("#continue");
+  115 | await page.click("//button[text()='Finish']");
+  116 | //await page.pause();
+  117 |
+  118 | await expect(page.locator('.complete-header')).toHaveText('Thank you for your order!');
+  119 |
+  120 | });
+  121 |
+  122 | test('Sample Test', async ({ page }) => {
+  123 |     await page.goto('https://playwright.dev/');
+  124 |     await expect(page.locator('text=Get Started')).toBeVisible();
+  125 |     });
+  126 |
+  127 |     test('Sample Test1', async ({ page }) => {
+  128 |         await page.goto('https://www.saucedemo.com/');
+  129 |
+  130 |
+  131 |
+  132 |         await page.getByPlaceholder('Username').fill('standard_user');
+  133 |         await page.getByPlaceholder('Password').fill('secret_sauce');
+  134 |         await page.getByRole('button', { name: 'Login' }).click();
+  135 |         
+  136 |         
+  137 |         await page.pause();
+  138 |     });
+  139 |
+  140 |     test.only('Inbuild Playwright locators',async({page})=>{
+  141 |        
+  142 |         await page.goto('https://paytm.com/recharge');
+> 143 |         await page.getByLabel('link',{name:'Postpaid'}).check();
+      |                                                         ^ Error: locator.check: Test timeout of 30000ms exceeded.
+  144 |
+  145 |         await page.pause();
+  146 |     });
+  147 |
+  148 |
+  149 | test('10 minutes timer',async({browser})=>{
+  150 |    const context= await browser.newContext();
+  151 |   const page=await context.newPage();
+  152 |   await page.goto('https://vclock.com/set-timer-for-10-minutes/');
+  153 |   await expect(page).toHaveTitle('Google');
+  154 |  //console.log(await page.title());
+  155 |  console.log(await page.locator("//h1[@id='lbl-title']").textContent());
+  156 |
+  157 |   
+  158 |
+  159 |
+  160 | })
+  161 |
+  162 |
+  163 |
+```

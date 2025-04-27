@@ -1,0 +1,427 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: has title
+- Location: C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\example.spec.js:4:6
+
+# Error details
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//ul[@class=\'s05d\']//a[@target=\'_blank\'][normalize-space()=\'Mobile Recharge\']')
+
+    at C:\Users\Sandeep\Desktop\Playwright_BatchA\tests\example.spec.js:9:103
+```
+
+# Page snapshot
+
+```yaml
+- banner:
+  - link "Paytm Logo":
+    - img "Paytm Logo"
+  - list:
+    - listitem: Ticket Booking
+    - listitem:
+      - text: Recharge & Bills
+      - list:
+        - listitem:
+          - link "Mobile Recharge"
+        - listitem:
+          - link "Electricity bill"
+        - listitem:
+          - link "DTH recharge"
+        - listitem:
+          - link "Municipal bill"
+        - listitem:
+          - link "Water bill"
+        - listitem:
+          - link "Gas & Cylinder"
+        - listitem:
+          - link "Loan EMI"
+        - listitem:
+          - link "Insurance Premium"
+        - listitem:
+          - link "Challan"
+    - listitem: Payments & Services
+    - listitem: Paytm for Business
+    - listitem: Company
+  - img "Download App"
+  - text: Download App
+  - img "user"
+  - text: Sign In
+- navigation:
+  - link "Flights Flights":
+    - img "Flights"
+    - text: Flights
+  - link "Bus Bus":
+    - img "Bus"
+    - text: Bus
+  - link "Trains Trains":
+    - img "Trains"
+    - text: Trains
+  - link "Intl. Flights Intl. Flights":
+    - img "Intl. Flights"
+    - text: Intl. Flights
+- img "travelLogo"
+- radio "One Way" [checked]
+- text: One Way
+- radio "Round Trip"
+- text: Round Trip From Delhi (DEL)
+- img "arrow"
+- text: To Mumbai (BOM) Depart Thu, 03 Apr 25 Return Add Return Passenger & Class 1 Traveller, Economy
+- button "Search Flights"
+- text: Special Fares (optional)
+- img "rupeeSymbolGreeenBg"
+- text: Extra Savings
+- button "Armed Forces Up to ₹600 off"
+- button "Student Extra Baggage"
+- button "Senior Citizen Up to ₹600 off"
+- list
+- text: Recharges
+- link "Mobile Recharge Mobile Recharge":
+  - img "Mobile Recharge"
+  - text: Mobile Recharge
+- link "DTH Recharge DTH Recharge":
+  - img "DTH Recharge"
+  - text: DTH Recharge
+- link "FasTag Recharge FasTag Recharge":
+  - img "FasTag Recharge"
+  - text: FasTag Recharge
+- link "View All Products View All Products":
+  - img "View All Products"
+  - text: View All Products
+- link
+- text: Bill Payments
+- link "Credit Card Payment Credit Card Payment":
+  - img "Credit Card Payment"
+  - text: Credit Card Payment
+- link "Electricity Bill Electricity Bill":
+  - img "Electricity Bill"
+  - text: Electricity Bill
+- link "Broadband Bill Broadband Bill":
+  - img "Broadband Bill"
+  - text: Broadband Bill
+- link "View All Products View All Products":
+  - img "View All Products"
+  - text: View All Products
+- link
+- img "brandLogo"
+- text: Build Long-term Wealth & Achieve your Goals. Investing on Paytm Money is transparent, low-cost and commission-free. Buy stocks & mutual funds that can help you create wealth & realise your dreams.
+- link "Learn More ->"
+- img "brand"
+- link "paytmLogo 24x7 Trusted customer support to assist and help you in every step of your journey Learn More ->":
+  - img "paytmLogo"
+  - text: 24x7 Trusted customer support to assist and help you in every step of your journey Learn More ->
+- img "logo"
+- text: One destination for Credit Cards Paytm HDFC, SBI Card & Axis Bank Credit Card with assured Cashback and incredible offers.
+- link "Apply Now ->"
+- img "link"
+- img "brand"
+- img "logo"
+- text: Insurance made easy. Buying insurance does not have to be tedious, time-consuming & confusing. Paytm Insurance removes the worry of getting insured by making it simple, convenient & easy-to-understand.
+- link "Get It Now ->"
+- img "brand"
+- img "brandLogo"
+- text: Pay anyone directly from your bank account. Pay anyone, everywhere. Make contactless & secure payments in-stores or online using Paytm UPI or Directly from your Bank Account. Plus, send & receive money from anyone.
+- link "link":
+  - img "link"
+- link "link":
+  - img "link"
+- img "brand"
+- img "brandLogo"
+- text: Accept payments online & offline Millions of small & big businesses use Paytm to accept payments anywhere any time with a wide range of solutions for all kind of merchants
+- link "Learn More ->"
+- img "brand"
+- contentinfo:
+  - text: Investor Relations
+  - img "plus"
+  - text: Home Financials Filings & Press Releases News & Events Corporate Governance Resources More about Paytm
+  - img "plus"
+  - heading "Paytm - India's Most Trusted Platform for BHIM UPI Payments, Money Transfers, Recharges, and other online payments" [level=1]
+  - paragraph: Paytm - India’s largest digital payment app makes it secure and seamless to pay using UPI, make bill payments, recharge mobiles, DTH, data card & Metro Card etc anywhere in India.
+  - heading "Pay Using Paytm UPI with Ease" [level=2]
+  - paragraph: Experience the epitome of convenience with Paytm's flawless UPI integration. Whether you're sending money to a friend, shopkeeper, or family, or making a purchase online, our user-friendly interface ensures a hassle-free experience. Enjoy swift and secure transactions with just a few taps, as we've streamlined the process to fit seamlessly into your busy lifestyle.
+  - paragraph: Stay in the loop with instant notifications on your transactions. Receive alerts for every payment, ensuring you're always in control of your finances. Our commitment to transparency empowers you with real-time updates, giving you the confidence that each transaction is executed with precision.
+  - heading "Pay All Your Bills with Paytm Anytime, Anywhere" [level=2]
+  - paragraph: Your one-stop solution for effortlessly managing and paying all your bills online. We understand the complexities of modern life, and our mission is to simplify the way you handle your financial responsibilities. With our user-friendly platform, you can easily pay your electricity, landline, water, phone bills, and more in just a few clicks. No more juggling multiple accounts or standing in long queues—Paytm consolidates all your bill payments into a convenient digital hub. Embrace convenience with Paytm and enjoy the ease of managing your bills in the digital age.
+  - paragraph:
+    - text: Effortlessly make mobile bill payments through our safe methods, processed through secured gateways for
+    - link "Airtel Recharge"
+    - text: ","
+    - link "Jio Recharge"
+    - text: ","
+    - link "Vodafone Idea Recharge"
+    - text: ","
+    - link "MTNL Recharge"
+    - text: ","
+    - link "BSNL Recharge"
+    - text: and more. You can also pay landline bills of Airtel, BSNL, Hathway, Asianet Broadband, Alliance Broadband, Tata Play Fibre.
+  - paragraph:
+    - text: Recharge your DTH online with ease. From
+    - link "Tata Play recharge"
+    - text: ","
+    - link "Airtel DTH recharge"
+    - text: ","
+    - link "Videocon D2H recharge"
+    - text: ","
+    - link "Sun Direct recharge"
+    - text: ", to"
+    - link "Dish TV recharge"
+    - text: and more just on Paytm.
+  - paragraph:
+    - text: Got a data card to recharge? We've got your back there too. Get your
+    - link "Airtel Data Card Recharge"
+    - text: ","
+    - link "Vodafone Idea Data Card Recharge"
+    - text: ","
+    - link "Jio Data Card Recharge"
+    - text: ","
+    - link "BSNL Data Card Recharge"
+    - text: and
+    - link "MTNL Data Card Recharge"
+    - text: now on Paytm.
+  - paragraph:
+    - strong: Make electricity bill payment
+    - text: "? Pay your"
+    - link "electricity bills online"
+    - text: on Paytm and avoid waiting in queues for hours. Whether you want to make
+    - link "Goa Electricity Bill Payment"
+    - text: ","
+    - link "Bihar Electricity Bill Payment"
+    - text: ","
+    - link "Haryana Electricity Bill Payment"
+    - text: ","
+    - link "Maharashtra Electricity Bill Payment"
+    - text: ","
+    - link "Punjab Electricity Bill Payment"
+    - text: ", or"
+    - link "Telangana Electricity Bill Payment"
+    - text: ", we've got you covered."
+  - paragraph:
+    - strong: Make Gas, Water And Municipal Bill Payment
+    - text: "? Pay your gas, water and"
+    - link "municipal bills"
+    - text: within seconds for
+    - link "Delhi Jal Board"
+    - text: ", Indore Municipal Corporation, Gwalior Municipal Corporation,"
+    - link "Bhopal Municipal Corporation"
+    - text: ","
+    - link "Bangalore Water Supply and Sewage Board"
+    - text: ", Surat Municipal Corporation, Pune Municipal Corporation,"
+    - link "Nagpur Municipal Corporation"
+    - text: ","
+    - link "Uttrakhand Jal Sansthan"
+    - text: ","
+    - link "Indraprastha Gas Limited"
+    - text: ","
+    - link "Gujarat Gas Limited"
+    - text: ", Adani Gas Limited,"
+    - link "Aavantika Gas Limited"
+    - text: ","
+    - link "Vadodara Gas Limited"
+    - text: ","
+    - link "Maharashtra Natural Gas Ltd"
+    - text: and more.
+  - heading "Book Online Tickets - Flight Tickets, Train Tickets & Bus Tickets with Ease" [level=2]
+  - paragraph:
+    - text: Save money and time by booking your travel tickets on Paytm. You can find
+    - link "cheap flight tickets"
+    - text: ", train tickets, and bus tickets on Paytm. Compare the prices, get schedules, pick the best-suited seat, and experience easy ticket booking services online. You can also save money on your travel by applying promo codes on flights, buses & trains to get cashback in your Paytm UPI on your travel tickets."
+  - paragraph:
+    - strong: Flight Tickets
+    - text: "- Just enter your boarding and destination city to know all the flight ticket prices for both"
+    - link "domestic flights"
+    - text: and
+    - link "international flights"
+    - text: .
+  - paragraph:
+    - strong: Train Ticket Booking
+    - text: "-"
+    - link "Check PNR status"
+    - text: ", find train schedule, and"
+    - link "get train seat availability"
+    - text: for your online
+    - link "train ticket bookings"
+    - text: . Just enter your boarding and destination station or city to know all the train ticket prices. Make instant train reservations through Paytm and save money with cashback.
+  - paragraph:
+    - text: Bus Tickets- Make fast online
+    - link "bus ticket booking"
+    - text: for both AC and non-AC buses, private and government buses on Paytm. Find all the buses and timings along with
+    - link "bus ticket offers"
+    - text: for your bus tickets.
+  - heading "Book Events, Movies, and Endless Entertainment with Paytm" [level=2]
+  - paragraph:
+    - text: Relive the moment and revive your daily routine with an amazing experience at an incredible amusement park. Find movie showtimes, and movie theaters to book your
+    - link "movie tickets online"
+    - text: and get movie ticket offers.
+  - paragraph: Enjoy the hottest buzz in the town, and do not miss out on the latest shows and events of your favorite artists, be it a music concert or booking a ticket to your favorite standup comedy show, you can do it all without hassle on Paytm. Our entertainment section enables you to book tickets online for Movies and Events in a matter of a few clicks and escape from your busy schedule.
+  - img "24X7 Help"
+  - text: 24X7 Help If we fall short of your expectations in any way, let us know.
+  - img "100% Assurance"
+  - text: 100% Assurance If you face any issue, your money is immediately refunded. Sit back shop on.
+  - img "Paytm Trust"
+  - text: Paytm Trust Your money is yours. All refunds come with no question asked guarantee.
+  - link "About Us"
+  - link "24x7 Help"
+  - link "Partner with us"
+  - link "Grievance policy"
+  - link "Blog"
+  - link "Bug bounty"
+  - link "Privacy"
+  - link "Terms & Conditions"
+  - link "Become a Seller & Earn"
+  - link "Paytm for Business"
+  - text: Be Safe. Be Vigilant
+  - paragraph: Please do not share your Paytm password, Credit/Debit card pin, other confidential information with anyone even if he/she claims to be from Paytm. We advise our customers to completely ignore such communications & report to us at cybercell@paytmbank.com
+  - text: Disclaimers
+  - paragraph: Cashback is 'Paytm loyalty cashback' given by 'Pay with Paytm' payment platform. It can be used to pay for goods & services sold by merchants that accept 'Pay with Paytm'
+  - text: Bank Grade Security with
+  - img "American Express"
+  - img "Diners Club"
+  - img "PCI"
+  - img "VISA"
+  - img "Rupay"
+  - img "Master Card"
+  - text: Company
+  - img "plus"
+  - link "About Us"
+  - link "CSR"
+  - link "Blog"
+  - link "Contact Us"
+  - link "Terms & Conditions"
+  - text: Sustainability
+  - link "UPI Payment App (Android)"
+  - link "UPI Payment App (iOS)"
+  - text: Important Updates
+  - img "plus"
+  - link "Verified Latest Paytm News"
+  - link "Is Paytm banned by RBI?"
+  - link "What will happen to Paytm UPI after 29 Feb?"
+  - link "What will happen to Paytm App after 29 Feb?"
+  - link "What will happen to Paytm Wallet after 29 Feb?"
+  - link "Career"
+  - text: Recharge & pay bills
+  - img "plus"
+  - text: Mobile Recharge Mobile Bill Payment Datacard Recharge Datacard Bill Payment Dth Recharge Electricity Bill Payment Landline Bill Payment Broadband Bill Payment Gas Bill Payment Water Bill Payment Metro Card Recharge Municipal Recharge Toll Recharge Credit Bill Payment Cabletv Recharge Devotion Fastag Recharge
+  - link "Recharge & Bill Payments App (Android)"
+  - link "Recharge & Bill Payments App (iOS)"
+  - text: Pay Loan EMI, Insurance Premiums & Education Fee
+  - img "plus"
+  - text: Pay Loan EMI Pay Insurance Premium Book Travel & Entertainment
+  - img "plus"
+  - text: Movie Ticket Booking Bus Ticket Booking Flight Tickets Booking Train Ticket Booking Events Booking Upcoming Movies
+  - link "Trains Sitemap"
+  - link "Bus Sitemap"
+  - link "Flight Tickets Booking App (Android)"
+  - link "Flight Tickets Booking App (iOS)"
+  - link "Bus Tickets Booking App (Android)"
+  - link "Bus Tickets Booking App (iOS)"
+  - link "Train Tickets Booking App (Android)"
+  - link "Train Tickets Booking App (iOS)"
+  - text: Investments & Miscellaneous
+  - img "plus"
+  - text: Mutual Fund Investments
+  - link "Fee Payment"
+  - link "Google Play Recharge"
+  - link "QR Code Scanner"
+  - link "Train Tickets"
+  - link "Paytm Service Agent"
+  - link "Paytm Careers"
+  - link "Free Credit Score"
+  - link "Investments App (Android)"
+  - link "Investments App (iOS)"
+  - link "Apply for Field Sales Executive Job"
+  - link "Become a Paytm Ambassador"
+  - text: Loans and Credit Cards
+  - img "plus"
+  - link "Postpaid"
+  - text: Credit Cards
+  - link "Personal Loan"
+  - link "Credit Report"
+  - link "Loan & Credit Cards App (Android)"
+  - link "Loan & Credit Cards App (iOS)"
+  - text: Financial Tools & Calculators
+  - img "plus"
+  - link "EMI Calculator"
+  - link "Personal Loan EMI Calculator"
+  - link "Home Loan EMI Calculator"
+  - link "Car Loan EMI Calculator"
+  - link "IFSC Code Finder"
+  - link "Financial Tools & Calculators"
+  - link "Currency Converter"
+  - link "List of Currencies"
+  - link "Currency Converter Sitemap"
+  - link "IFSC Code Sitemap"
+  - link "Income Tax Calculator"
+  - link "HRA Calculator"
+  - link "PPF Calculator"
+  - link "Gratuity Calculator"
+  - link "NPS Calculator"
+  - link "Sukanya Samriddhi Yojana Calculator"
+  - link "EPF Calculator"
+  - link "APY Calculator"
+  - link "Retirement Calculator"
+  - link "SIP Calculator"
+  - link "Mutual Fund Calculator"
+  - link "Lumpsum Calculator"
+  - link "SWP Calculator"
+  - link "FD Calculator"
+  - link "RD Calculator"
+  - link "GST Calculator"
+  - link "Compound Interest Calculator"
+  - link "Simple Interest Calculator"
+  - link "Educational Loan EMI Calculator"
+  - link "Finance App (Android)"
+  - link "Finance App (iOS)"
+  - text: © 2025 Paytm Follow Us
+  - link "Facebook":
+    - img "Facebook"
+  - link "Twitter":
+    - img "Twitter"
+  - link "Youtube":
+    - img "Youtube"
+  - link "LinkedIn":
+    - img "LinkedIn"
+  - link "Instagram":
+    - img "Instagram"
+```
+
+# Test source
+
+```ts
+   1 | // @ts-check
+   2 | import { test, expect } from '@playwright/test';
+   3 |
+   4 | test.only('has title', async ({ page }) => {
+   5 |   await page.goto('https://paytm.com/');
+   6 |   //await page.pause();
+   7 |   await page.locator("//li[text()='Recharge & Bills']").hover();
+   8 |   await page.waitForTimeout(5000);
+>  9 |   await page.locator("//ul[@class='s05d']//a[@target='_blank'][normalize-space()='Mobile Recharge']").click();
+     |                                                                                                       ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  10 |   await page.waitForTimeout(5000);
+  11 |   await page.locator("//input[@type='tel']").fill("1234567890");
+  12 |   
+  13 |   //handle radio button
+  14 |  // await page.locator("//label[@id='rt']").click();
+  15 |  // await page.waitForTimeout(5000);
+  16 |   
+  17 | });
+  18 |
+  19 | test('get started link', async ({ page }) => {
+  20 |   await page.goto('https://playwright.dev/');
+  21 |
+  22 |   // Click the get started link.
+  23 |   await page.getByRole('link', { name: 'Get started' }).click();
+  24 |
+  25 |   // Expects page to have a heading with the name of Installation.
+  26 |   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  27 | });
+  28 |
+```
