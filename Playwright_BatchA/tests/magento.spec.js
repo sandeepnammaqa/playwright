@@ -221,6 +221,12 @@ test('Sample Test', async ({ page }) => {
        await framePage.locator("//th[@class='text-center bronze-plan border-0 pb-5']//button[@class='btn btn-block btn-outline-primary btn-rounded'][normalize-space()='ENROLL']").click();
        
     });
+	
+    test.only("Visual Testing",async({page})=>{
+      await page.goto("https://www.saucedemo.com/");
+      expect(await page.screenshot()).toMatchSnapshot("saucedemo.png");
+
+    });		
 
 test('10 minutes timer',async({browser})=>{
    const context= await browser.newContext();
